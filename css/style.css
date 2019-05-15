@@ -83,20 +83,35 @@ body {
 
     animation: moveInRight 2s ease-in-out;
 }
-
+/********************************************* 
+For best browser support you should only animate two different properties - opacity and transform (which does a lot - we can do a lot of animation with transform)
+*********************************************/
 @keyframes moveInLeft {
+    /**************************************** 
+    0% - starts before the animation actually starts 
+    ****************************************/
     0% {
         opacity: 0;
+        /***************************************
+        x direction - left to right (horizontal)
+        positive direction goes to the right 
+        negative direction goes to left 
+        y direction - top to bottom (vertical)
+         ****************************************/
         transform: translateX(-100px);
     }
-
+    /**************************************** 
+    80% - at a point in the animation throughout the animation - in this case 80% but it can be anywhere you want
+    ****************************************/
     80% {
         transform: translateX(10px);
     }
-
+      /****************************************
+    100% - when the animation finishes 
+     ****************************************/
     100% {
         opacity: 1;
-        translate: (0);
+        translate: (0); /* 0 is the initial state */
     }
 
 }

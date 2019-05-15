@@ -1,12 +1,13 @@
-/*
+/********************************
 COLORS:
 
 Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 
-*/
 
+browser reset
+*****************************/
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +24,7 @@ body {
 }
 
 .header {
-    height: 95vh;
+    height: 95vh; /* vh - view height */
     background-image: linear-gradient(
         to right bottom, 
         rgba(75, 238, 47, 0.8), 
@@ -64,14 +65,16 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
-
+    
+    /******************************************
+    animation properties are how we connect the keyframe to an element 
+    ******************************************/
     animation-name: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-     /*
-    animation-iteration-count:  3;   
-    animation-delay: 2s;
-    */
+    animation-duration: 2s; /* fast the animation moves*/
+    animation-timing-function: ease-in-out; /* defines how the animation will proceed; how fast or slow the other properties we set will animate  */
+     
+      /* animation-iteration-count:  3; iteration count - how many times the animation will happen */ 
+    /*animation-delay: 2s; delay - how long the animation will delay before it begins */
 }
 
 .heading-primary-sub {

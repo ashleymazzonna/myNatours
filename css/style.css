@@ -27,9 +27,9 @@ body {
     height: 95vh; /* vh - view height */
     background-image: linear-gradient(
         to right bottom, 
-        rgba(75, 238, 47, 0.8), 
-        rgba(79, 228, 178, 0.8)),
-        url("/home/admin1/Documents/advanced-css-course-master/Natours/starter/img/hero.jpg");
+        rgba(54, 232, 248, 0.513), 
+        rgba(136, 211, 245, 0.74)),
+        url("/home/admin1/udemy_css/Natours/my_natours/img/hero.jpg");
     background-size: cover;
     background-position: top;
     position: relative;
@@ -135,6 +135,21 @@ For best browser support you should only animate two different properties - opac
     }
 
 }
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: gray;
+    padding: 15px 40px;
+    display: inline-block;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
 
 
 

@@ -51,7 +51,8 @@ body {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
@@ -65,6 +66,7 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    margin-bottom: 60px;
     
     /******************************************
     animation properties are how we connect the keyframe to an element 
@@ -99,7 +101,7 @@ For best browser support you should only animate two different properties - opac
         x direction - left to right (horizontal)
         positive direction goes to the right 
         negative direction goes to left 
-        y direction - top to bottom (vertical)
+        y direction - top to bottom- upsilon axis - to move is a negative value to move down is a positive value (vertical)
          ****************************************/
         transform: translateX(-100px);
     }
@@ -140,9 +142,20 @@ For best browser support you should only animate two different properties - opac
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    color: gray;
     padding: 15px 40px;
     display: inline-block;
+    border-radius: 100px;
+    transition: all .2s; /*transition on the initial state) */
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px); /*-1 is in relation to the initial state not the -3px state) */
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
 .btn-white {

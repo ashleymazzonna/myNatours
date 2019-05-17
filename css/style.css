@@ -199,7 +199,7 @@ For best browser support you should only animate two different properties - opac
 }
 
 .btn-animated {
-    animation: moveInButton 5s ease-out;
+    animation: moveInButton 3s ease-out;
     animation-fill-mode: backwards;
 }
 

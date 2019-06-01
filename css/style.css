@@ -13,14 +13,17 @@ browser reset
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: 10px;
+}
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
 }
 
 .header {
@@ -39,12 +42,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -63,10 +66,10 @@ body {
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
-    margin-bottom: 60px;
+    letter-spacing: 3.5rem;
+    margin-bottom: 6rem;
     
     /******************************************
     animation properties are how we connect the keyframe to an element 
@@ -81,9 +84,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 17.5rem;
     padding: 5px;
 
     animation: moveInRight 2s ease-in-out;
@@ -103,13 +106,13 @@ For best browser support you should only animate two different properties - opac
         negative direction goes to left 
         y direction - top to bottom- upsilon axis - to move is a negative value to move down is a positive value (vertical)
          ****************************************/
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     /**************************************** 
     80% - at a point in the animation throughout the animation - in this case 80% but it can be anywhere you want
     ****************************************/
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
       /****************************************
     100% - when the animation finishes 
@@ -124,11 +127,11 @@ For best browser support you should only animate two different properties - opac
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(200px);
+        transform: translateX(20rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -141,7 +144,7 @@ For best browser support you should only animate two different properties - opac
 @keyframes moveInButton {
     0% {
         opacity: 0;
-        transform: translatey(30px);
+        transform: translateY(3rem);
     }
     100% {
         opacity: 1;
@@ -155,21 +158,21 @@ For best browser support you should only animate two different properties - opac
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s; /*transition on the initial state) */
     position: relative;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 
 .btn:active {
     transform: translateY(-1px); /*-1 is in relation to the initial state not the -3px state) */
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 
 .btn-white {
@@ -183,7 +186,7 @@ For best browser support you should only animate two different properties - opac
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px; 
+    border-radius: 10rem; 
     position: absolute;
     top: 0;
     left: 0;
@@ -194,7 +197,7 @@ For best browser support you should only animate two different properties - opac
 .btn-white::after {background-color: #fff;}
 
 .btn:hover::after {
-    transform: scalex(1.5) scaleY(1.6);
+    transform: scaleX(1.5) scaleY(1.6);
     opacity: 0;
 }
 

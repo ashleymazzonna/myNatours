@@ -1,0 +1,25 @@
+{
+  "name": "my_natours",
+  "version": "1.0.0",
+  "description": "Website for Natours. Project completed through Udemy course by Jonas Schmedtmann.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashleymazzonna/myNatours.git"
+  },
+  "author": "Ashley Mazzonna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashleymazzonna/myNatours/issues"
+  },
+  "homepage": "https://github.com/ashleymazzonna/myNatours#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

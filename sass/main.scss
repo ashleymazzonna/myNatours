@@ -1,0 +1,217 @@
+/********************************
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+
+browser reset
+*****************************/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+   
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+
+     box-sizing: border-box;
+}
+
+.header {
+    height: 95vh; /* vh - view height */
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(54, 232, 248, 0.513), 
+        rgba(136, 211, 245, 0.74)),
+        url("/home/admin1/udemy_css/Natours/my_natours/img/hero.jpg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo {
+    height: 3.5rem;
+}
+
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    margin-bottom: 6rem;
+    
+    /******************************************
+    animation properties are how we connect the keyframe to an element 
+    ******************************************/
+    animation-name: moveInLeft;
+    animation-duration: 2s; /* fast the animation moves*/
+    animation-timing-function: ease-in-out; /* defines how the animation will proceed; how fast or slow the other properties we set will animate  */
+     
+      /* animation-iteration-count:  3; iteration count - how many times the animation will happen */ 
+    /*animation-delay: 2s; delay - how long the animation will delay before it begins */
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    padding: 5px;
+
+    animation: moveInRight 2s ease-in-out;
+}
+/********************************************* 
+For best browser support you should only animate two different properties - opacity and transform (which does a lot - we can do a lot of animation with transform)
+*********************************************/
+@keyframes moveInLeft {
+    /**************************************** 
+    0% - starts before the animation actually starts 
+    ****************************************/
+    0% {
+        opacity: 0;
+        /***************************************
+        x direction - left to right (horizontal)
+        positive direction goes to the right 
+        negative direction goes to left 
+        y direction - top to bottom- upsilon axis - to move is a negative value to move down is a positive value (vertical)
+         ****************************************/
+        transform: translateX(-10rem);
+    }
+    /**************************************** 
+    80% - at a point in the animation throughout the animation - in this case 80% but it can be anywhere you want
+    ****************************************/
+    80% {
+        transform: translateX(1rem);
+    }
+      /****************************************
+    100% - when the animation finishes 
+     ****************************************/
+    100% {
+        opacity: 1;
+        translate: (0); /* 0 is the initial state */
+    }
+
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        translate: (0);
+    }
+
+}
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        translate: (0);
+    }
+
+}
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s; /*transition on the initial state) */
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px); /*-1 is in relation to the initial state not the -3px state) */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn--white {
+    background-color: #fff;
+    color: #777;
+}
+
+/* initial state of the psuedo after  */
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--white::after {background-color: #fff;}
+
+.btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn--animated {
+    animation: moveInButton 3s ease-out;
+    animation-fill-mode: backwards;
+    color: #eee;
+}
+
+
+

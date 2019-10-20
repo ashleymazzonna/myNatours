@@ -69,7 +69,7 @@ html {
 .header {
   height: 95vh;
   /* vh - view height */
-  background-image: linear-gradient(to right bottom, rgba(116, 236, 95, 0.7), rgba(39, 163, 122, 0.7)), url("/img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(118, 243, 96, 0.7), rgba(39, 163, 122, 0.7)), url("/img/hero.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -98,7 +98,7 @@ html {
 .header {
   height: 95vh;
   /* vh - view height */
-  background-image: linear-gradient(to right bottom, rgba(116, 236, 95, 0.7), rgba(39, 163, 122, 0.7)), url("/img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(118, 243, 96, 0.7), rgba(39, 163, 122, 0.7)), url("/img/hero.jpg");
   background-size: cover;
   background-position: top;
   position: relative;

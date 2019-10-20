@@ -8,12 +8,15 @@
 @import "base/utilities";
 
 @import "components/buttons";
-@import "components/components";
+@import "components/composition";
+@import "components/feature-box";
 
 @import "layout/header";
 @import "layout/grid";
 
 @import "pages/home";
+
+@import "node_modules/@icon/linea-basic/icons";
 
 
 

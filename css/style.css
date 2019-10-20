@@ -1,6 +1,3 @@
-/********************************
-browser reset
-*****************************/
 *,
 *::after,
 *::before {
@@ -12,62 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  /* vh - view height */
-  background-image: linear-gradient(to right bottom, rgba(116, 236, 95, 0.7), rgba(39, 163, 122, 0.7)), url("/img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    /******************************************
-    animation properties are how we connect the keyframe to an element 
-    ******************************************/
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    /* fast the animation moves*/
-    animation-timing-function: ease-in-out;
-    /* defines how the animation will proceed; how fast or slow the other properties we set will animate  */
-    /* animation-iteration-count:  3; iteration count - how many times the animation will happen */
-    /*animation-delay: 2s; delay - how long the animation will delay before it begins */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.5rem;
-    padding: 5px;
-    animation: moveInRight 2s ease-in-out; }
 
 /********************************************* 
 For best browser support you should only animate two different properties - opacity and transform (which does a lot - we can do a lot of animation with transform)
@@ -116,6 +58,64 @@ For best browser support you should only animate two different properties - opac
     opacity: 1;
     translate: 0; } }
 
+html {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.header {
+  height: 95vh;
+  /* vh - view height */
+  background-image: linear-gradient(to right bottom, rgba(116, 236, 95, 0.7), rgba(39, 163, 122, 0.7)), url("/img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+html {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.header {
+  height: 95vh;
+  /* vh - view height */
+  background-image: linear-gradient(to right bottom, rgba(116, 236, 95, 0.7), rgba(39, 163, 122, 0.7)), url("/img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
 .btn {
   /* initial state of the psuedo after  */ }
   .btn:link, .btn:visited {
@@ -157,3 +157,31 @@ For best browser support you should only animate two different properties - opac
   .btn--animated {
     animation: moveInButton 3s ease-out;
     animation-fill-mode: backwards; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /******************************************
+    animation properties are how we connect the keyframe to an element 
+    ******************************************/
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    /* fast the animation moves*/
+    animation-timing-function: ease-in-out;
+    /* defines how the animation will proceed; how fast or slow the other properties we set will animate  */
+    /* animation-iteration-count:  3; iteration count - how many times the animation will happen */
+    /*animation-delay: 2s; delay - how long the animation will delay before it begins */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    padding: 5px;
+    animation: moveInRight 2s ease-in-out; }

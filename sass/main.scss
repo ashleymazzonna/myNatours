@@ -1,13 +1,16 @@
 /********************************
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-
 browser reset
 *****************************/
+
+$color-primary: #49ee80;
+$color-primary-light: #74ec5f;
+$color-primary-dark: #27a37a;
+$color-gray-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+
+
+
 *,
 *::after,
 *::before{
@@ -25,7 +28,7 @@ body {
     font-weight: 400;
     /* font-size: 16px; */
     line-height: 1.7;
-    color: #777;
+    color: $color-gray-dark;
     padding: 3rem;
 
      box-sizing: border-box;
@@ -35,67 +38,70 @@ body {
     height: 95vh; /* vh - view height */
     background-image: linear-gradient(
         to right bottom, 
-        rgba(54, 232, 248, 0.513), 
-        rgba(136, 211, 245, 0.74)),
-        url("/home/admin1/udemy_css/Natours/my_natours/img/hero.jpg");
+        rgba($color-primary-light, 0.7), 
+        rgba($color-primary-dark, 0.7)),
+        url("/img/hero.jpg");
     background-size: cover;
     background-position: top;
     position: relative;
 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
 
-.header__logo-box {
+    &__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
-}
+    }
 
-.header__logo {
+    &__logo {
     height: 3.5rem;
-}
+    }
 
-.header__text-box {
+    &__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    }
+
 }
 
-.heading-primary {
-    color: white;
+heading-primary {
+    color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
-}
 
-.heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    margin-bottom: 6rem;
-    
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        margin-bottom: 6rem;
+            
     /******************************************
     animation properties are how we connect the keyframe to an element 
     ******************************************/
-    animation-name: moveInLeft;
-    animation-duration: 2s; /* fast the animation moves*/
-    animation-timing-function: ease-in-out; /* defines how the animation will proceed; how fast or slow the other properties we set will animate  */
-     
-      /* animation-iteration-count:  3; iteration count - how many times the animation will happen */ 
+        animation-name: moveInLeft;
+        animation-duration: 2s; /* fast the animation moves*/
+        animation-timing-function: ease-in-out; /* defines how the animation will proceed; how fast or slow the other properties we set will animate  */
+    
+    /* animation-iteration-count:  3; iteration count - how many times the animation will happen */ 
     /*animation-delay: 2s; delay - how long the animation will delay before it begins */
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.5rem;
+        padding: 5px;
+
+        animation: moveInRight 2s ease-in-out;
+    }
 }
 
-.heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.5rem;
-    padding: 5px;
 
-    animation: moveInRight 2s ease-in-out;
-}
 /********************************************* 
 For best browser support you should only animate two different properties - opacity and transform (which does a lot - we can do a lot of animation with transform)
 *********************************************/
@@ -158,60 +164,67 @@ For best browser support you should only animate two different properties - opac
 
 }
 
-
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s; /*transition on the initial state) */
-    position: relative;
-    font-size: 1.6rem;
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s; /*transition on the initial state) */
+        position: relative;
+        font-size: 1.6rem;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+         &::after {
+            transform: scaleX(1.5) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px); /*-1 is in relation to the initial state not the -3px state) */
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
 }
 
-.btn:active {
-    transform: translateY(-1px); /*-1 is in relation to the initial state not the -3px state) */
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-}
+    &--white {
+        background-color: $color-white;
+        color: $color-gray-dark;
+         &::after { 
+             background-color: $color-white;
+        }
+    }
 
-.btn--white {
-    background-color: #fff;
-    color: #777;
-}
+    /* initial state of the psuedo after  */
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
 
-/* initial state of the psuedo after  */
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
+    &--animated {
+        animation: moveInButton 3s ease-out;
+        animation-fill-mode: backwards;
+    }
+ }
 
-.btn--white::after {background-color: #fff;}
 
-.btn:hover::after {
-    transform: scaleX(1.5) scaleY(1.6);
-    opacity: 0;
-}
 
-.btn--animated {
-    animation: moveInButton 3s ease-out;
-    animation-fill-mode: backwards;
-    color: #eee;
-}
+
+
+
 
 
 

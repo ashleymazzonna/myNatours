@@ -231,7 +231,7 @@ html {
     font-size: 6rem;
     margin-bottom: .5rem;
     display: inline-block;
-    background-image: linear-gradient(to right, #87f873, #01af3b);
+    background-image: linear-gradient(to right, #03f353, #01af3b);
     -webkit-background-clip: text;
     color: transparent; }
   .feature-box:hover {
@@ -240,7 +240,7 @@ html {
 .header {
   height: 95vh;
   /* vh - view height */
-  background-image: linear-gradient(to right bottom, rgba(135, 248, 115, 0.7), rgba(1, 175, 59, 0.7)), url("/img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(3, 243, 83, 0.7), rgba(135, 248, 115, 0.7)), url("/img/hero.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -291,5 +291,9 @@ html {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(135, 248, 115, 0.7), rgba(1, 175, 59, 0.7)), url("/img/nat-4.jpg");
-  background-size: cover; }
+  background-image: linear-gradient(to right bottom, rgba(3, 243, 83, 0.7), rgba(135, 248, 115, 0.7)), url("/img/nat-4.jpg");
+  background-size: cover;
+  margin-top: -10rem;
+  transform: skewY(-7deg); }
+  .section-features > * {
+    transform: skewY(7deg); }

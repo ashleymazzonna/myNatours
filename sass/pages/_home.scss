@@ -16,7 +16,13 @@
     transform: skewY(-7deg);
     //.section-features >(direct child selects the first child of the parent element) *(selects all the first child elements of the parent element)
     & > * {
-        transform: skewY(                        7deg);
+        transform: skewY(7deg);
 
     }
+}
+
+.section-tours {
+    background-color: $color-gray-light-1;
+    margin-top: 10rem;
+    padding: 25rem 0 50rem 0;
 }

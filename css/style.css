@@ -58,67 +58,6 @@ For best browser support you should only animate two different properties - opac
     opacity: 1;
     translate: 0; } }
 
-html {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    /******************************************
-    animation properties are how we connect the keyframe to an element 
-    ******************************************/
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    /* fast the animation moves*/
-    animation-timing-function: ease-in-out;
-    /* defines how the animation will proceed; how fast or slow the other properties we set will animate  */
-    /* animation-iteration-count:  3; iteration count - how many times the animation will happen */
-    /*animation-delay: 2s; delay - how long the animation will delay before it begins */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.5rem;
-    padding: 5px;
-    animation: moveInRight 2s ease-in-out; }
-
-.heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-  background-image: linear-gradient(to right, #87f873, #01af3b);
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
-  .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
-
-.heading-tertiary {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase; }
-
-.paragraph {
-  font-size: 1.6rem;
-  text-align: justify; }
-  .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
-
 .u-center-text {
   text-align: center; }
 
@@ -240,24 +179,86 @@ html {
 .card {
   perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 52rem; }
   .card__side {
-    height: 50rem;
+    height: 52rem;
     transition: all 1s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
-      background-color: white; }
+      background-color: #fff; }
     .card__side--back {
-      background-color: green;
-      transform: rotateY(180deg); }
+      transform: rotateY(-180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      widows: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-weight: 100 !important;
+    font-size: 6rem;
+    font-stretch: expanded; }
 
 .header {
   height: 95vh;
@@ -305,6 +306,67 @@ html {
     width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+html {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /******************************************
+    animation properties are how we connect the keyframe to an element 
+    ******************************************/
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    /* fast the animation moves*/
+    animation-timing-function: ease-in-out;
+    /* defines how the animation will proceed; how fast or slow the other properties we set will animate  */
+    /* animation-iteration-count:  3; iteration count - how many times the animation will happen */
+    /*animation-delay: 2s; delay - how long the animation will delay before it begins */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    padding: 5px;
+    animation: moveInRight 2s ease-in-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #87f873, #01af3b);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem;
+  text-align: justify; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
 
 .section-about {
   background-color: #f7f7f7;
